@@ -12,7 +12,7 @@
       "url": "https://atcoder.jp/contests/abc085/tasks/abc085_a",
       "directory": {
         "path": "a",
-        "testdir": "tests"
+        "testdir": "test"
       }
     },
     {
@@ -22,7 +22,7 @@
       "url": "https://atcoder.jp/contests/abc085/tasks/abc085_b",
       "directory": {
         "path": "b",
-        "testdir": "tests"
+        "testdir": "test"
       }
     },
     {
@@ -32,7 +32,7 @@
       "url": "https://atcoder.jp/contests/abc085/tasks/abc085_c",
       "directory": {
         "path": "c",
-        "testdir": "tests"
+        "testdir": "test"
       }
     },
     {
@@ -42,7 +42,7 @@
       "url": "https://atcoder.jp/contests/abc085/tasks/abc085_d",
       "directory": {
         "path": "d",
-        "testdir": "tests"
+        "testdir": "test"
       }
     }
   ]
