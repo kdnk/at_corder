@@ -7,8 +7,9 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int a, b, c;
+  cin >> a >> b >> c;
+
+  cout << min(a + b, min(b + c, c + a)) << endl;
   return 0;
 }

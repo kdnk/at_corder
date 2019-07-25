@@ -7,8 +7,14 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int x, a, b;
+  cin >> x >> a >> b;
+
+  if (abs(x - a) < abs(x - b)) {
+    cout << "A" << endl;
+  } else {
+    cout << "B" << endl;
+  }
+
   return 0;
 }

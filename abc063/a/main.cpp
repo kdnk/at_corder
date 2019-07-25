@@ -7,8 +7,12 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int a, b;
+  cin >> a >> b;
+  if (10 <= (a + b)) {
+    cout << "error" << endl;
+  } else {
+    cout << a + b << endl;
+  }
   return 0;
 }

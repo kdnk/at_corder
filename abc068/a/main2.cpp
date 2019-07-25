@@ -6,9 +6,10 @@ using namespace std;
 int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
-
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  string n;
+  cin >> n;
+  string ans;
+  ans = "ABC" + n;
+  cout << ans << endl;
   return 0;
 }

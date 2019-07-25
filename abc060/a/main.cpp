@@ -7,8 +7,13 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  string a, b, c;
+  cin >> a >> b >> c;
+
+  if (a.back() == b.front() and b.back() == c.front()) {
+    cout << "YES" << endl;
+  } else {
+    cout << "NO" << endl;
+  }
   return 0;
 }

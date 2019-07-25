@@ -7,8 +7,13 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int a, b, c;
+  cin >> a >> b >> c;
+  if ((a <= c) and (c <= b)) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
+  }
+
   return 0;
 }

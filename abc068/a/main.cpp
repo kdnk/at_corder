@@ -7,8 +7,9 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  string n;
+  cin >> n;
+
+  cout << "ABC" + n << endl;
   return 0;
 }

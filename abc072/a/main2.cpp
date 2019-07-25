@@ -6,9 +6,13 @@ using namespace std;
 int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
-
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int x, t, ans;
+  cin >> x >> t;
+  if (x - t <= 0) {
+    ans = 0;
+  } else {
+    ans = x - t;
+  }
+  cout << ans << endl;
   return 0;
 }

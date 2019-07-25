@@ -7,8 +7,14 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int a, b;
+  cin >> a >> b;
+
+  if (a % 3 == 0 || b % 3 == 0 || (a + b) % 3 == 0) {
+    cout << "Possible" << endl;
+  } else {
+    cout << "Impossible" << endl;
+  }
+
   return 0;
 }

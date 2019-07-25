@@ -7,8 +7,8 @@ int main() {
   cin.tie(0);
   ios::sync_with_stdio(false);
 
-  int n, a;
-  cin >> n >> a;
-  cout << n * n - a << endl;
+  int n, m;
+  cin >> n >> m;
+  cout << (n - 1) * (m - 1) << endl;
   return 0;
 }
