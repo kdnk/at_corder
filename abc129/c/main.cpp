@@ -24,7 +24,7 @@ int main() {
   dp[0] = 1;
   if (issafe[1]) dp[1] = 1;
 
-  for (int i = 2; i <= n; n++) {
+  for (int i = 2; i <= n; i++) {
     if (issafe[i - 1]) dp[i] += dp[i - 1];
     if (issafe[i - 2]) dp[i] += dp[i - 2];
 
