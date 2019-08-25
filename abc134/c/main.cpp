@@ -12,37 +12,16 @@ int main() {
   vector<int> nums(n);
   rep(i, n) { cin >> nums.at(i); }
 
-  int g_first = 0;
-  int g_first_index = -1;
-  int g_second = 0;
-  int g_second_index = -1;
+  vector<int> sorted_nums(nums);
+  sort(sorted_nums.begin(), sorted_nums.end(), greater<int>());
 
   rep(i, n) {
-    int max = 0;
-    if (i != g_first_index && 0 < g_first_index) {
-      max = nums.at(g_first_index);
+    if (nums.at(i) == sorted_nums.at(0)) {
+      cout << sorted_nums.at(1) << endl;
     } else {
-      rep(j, n) {
-        if (i == g_first_index && g_second_index > 0) {
-          max = g_second;
-        } else {
-          if (i != j) {
-            if (max < nums.at(j)) {
-              max = nums.at(j);
-              if (g_first < max) {
-                g_first_index = j;
-                g_first = max;
-              }
-            }
-            if (g_second < nums.at(j) && nums.at(j) < max) {
-              g_second = nums.at(j);
-              g_second_index = j;
-            }
-          }
-        }
-      }
+      cout << sorted_nums.at(0) << endl;
     }
-    cout << max << endl;
   }
+
   return 0;
 }
