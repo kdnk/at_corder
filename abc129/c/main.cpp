@@ -1,31 +1,35 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
+typedef signed long long ll;
 const int MOD = 1000000007;
 
-int N, M;
-vector<bool> issafe; // issafe[v] := v が壊れていないかどうか
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
 
 int main() {
-    cin >> N >> M;
-    issafe.assign(N+1, true);
-    for (int i = 0; i < M; ++i) {
-        int a; cin >> a;
-        issafe[a] = false; // a 段目は壊れてる
-    }
+  cin.tie(0);
+  ios::sync_with_stdio(false);
 
-    // DP テーブル
-    vector<int> dp(N+1, 0); // 各段について 0 で初期化しておく
+  int n, m;
+  cin >> n >> m;
+  vector<bool> issafe(n + 1, true);
 
-    // 初期条件
-    dp[0] = 1;
-    if (issafe[1]) dp[1] = 1;
+  rep(i, m) {
+    int a;
+    cin >> a;
+    issafe[a] = false;
+  }
 
-    // ループ
-    for (int n = 2; n <= N; ++n) {
-        if (issafe[n-1]) dp[n] += dp[n-1]; // n-1 段目が安全なら
-        if (issafe[n-2]) dp[n] += dp[n-2]; // n-2 段目が安全なら
-        dp[n] %= MOD; // 1000000007 で割る
-    }
-    cout << dp[N] << endl;
+  vector<int> dp(n + 1, 0);
+
+  dp[0] = 1;
+  if (issafe[1]) dp[1] = 1;
+
+  for (int i = 2; i <= n; n++) {
+    if (issafe[i - 1]) dp[i] += dp[i - 1];
+    if (issafe[i - 2]) dp[i] += dp[i - 2];
+
+    dp[i] %= MOD;
+  }
+  cout << dp[n] << endl;
+  return 0;
 }
