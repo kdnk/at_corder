@@ -36,7 +36,7 @@ int main() {
         }
       }
       if (con % 2 != p[i]) {
-        bool ok = false;
+        ok = false;
       }
     }
     if (ok) {
